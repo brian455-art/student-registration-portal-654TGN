@@ -1,0 +1,593 @@
+/* =================================
+   1. CSS VARIABLES
+================================= */
+
+:root {
+  --primary: #15366b;
+  --secondary: #2563eb;
+  --accent: #fbbf24;
+  --background: #f4f7fc;
+  --white: #ffffff;
+  --text: #263449;
+  --muted: #64748b;
+  --border: #dce3ed;
+  --success: #15803d;
+  --danger: #dc2626;
+  --shadow: 0 5px 20px rgba(15, 23, 42, 0.07);
+}
+
+/* =================================
+   2. GENERAL STYLING
+================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  background-color: var(--background);
+  color: var(--text);
+  line-height: 1.7;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* =================================
+   3. HEADER
+================================= */
+
+.site-header {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.header-content {
+  max-width: 900px;
+  margin: auto;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.logo-icon {
+  background: white;
+  color: var(--primary);
+  padding: 5px 12px;
+  border-radius: 8px;
+}
+
+.site-header h1 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.site-header p {
+  margin-bottom: 25px;
+  color: #e0eaff;
+}
+
+.header-button {
+  display: inline-block;
+  padding: 12px 25px;
+  background: var(--accent);
+  color: var(--primary);
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.header-button:hover {
+  background: white;
+  transform: translateY(-3px);
+}
+
+.header-image {
+  width: 280px;
+  height: 190px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin: 30px auto 0;
+  border: 4px solid white;
+}
+
+/* =================================
+   4. NAVIGATION
+================================= */
+
+.main-navigation {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  background: var(--primary);
+  padding: 16px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.main-navigation a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.main-navigation a:hover {
+  color: var(--accent);
+}
+
+/* =================================
+   5. MAIN CONTENT
+================================= */
+
+main {
+  max-width: 1150px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+section {
+  background: white;
+  padding: 35px;
+  margin-bottom: 30px;
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+}
+
+/* =================================
+   6. SECTION HEADINGS
+================================= */
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.section-label {
+  display: inline-block;
+  color: var(--secondary);
+  background: #eaf1ff;
+  padding: 5px 13px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.section-heading h2 {
+  color: var(--primary);
+  font-size: 27px;
+  margin: 12px 0;
+}
+
+.section-heading p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* =================================
+   7. FEATURE CARDS
+================================= */
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.feature-card {
+  background: #f8faff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 25px;
+  transition: 0.3s;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow);
+}
+
+.feature-card h3 {
+  color: var(--primary);
+  margin-bottom: 10px;
+  font-size: 17px;
+}
+
+.feature-card p {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* =================================
+   8. REGISTRATION FORM
+================================= */
+
+.registration-form {
+  max-width: 850px;
+  margin: auto;
+  padding: 25px;
+  background: #f9fbff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+fieldset {
+  border: 1px solid var(--border);
+  padding: 25px;
+  margin-bottom: 25px;
+  border-radius: 10px;
+}
+
+legend {
+  color: var(--primary);
+  font-weight: 700;
+  padding: 0 10px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 7px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  font-family: inherit;
+  font-size: 13px;
+  background: white;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: 2px solid var(--secondary);
+  border-color: var(--secondary);
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.form-question {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* =================================
+   9. RADIO AND CHECKBOX
+================================= */
+
+.choice-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.choice-item {
+  display: flex !important;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px !important;
+  font-weight: 400 !important;
+  cursor: pointer;
+}
+
+.choice-item input {
+  width: auto !important;
+  margin: 0;
+  accent-color: var(--secondary);
+}
+
+.terms-group {
+  padding: 15px;
+  background: #eff6ff;
+  border-radius: 8px;
+}
+
+/* =================================
+   10. FORM BUTTONS
+================================= */
+
+.form-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.form-buttons button {
+  padding: 13px 25px;
+  border: none;
+  border-radius: 7px;
+  font-family: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.submit-button {
+  background: var(--primary);
+  color: white;
+}
+
+.submit-button:hover {
+  background: var(--secondary);
+  transform: translateY(-2px);
+}
+
+.reset-button {
+  background: #e2e8f0;
+  color: var(--text);
+}
+
+/* =================================
+   11. FORM MESSAGES
+================================= */
+
+.form-message {
+  display: none;
+  max-width: 850px;
+  margin: 15px auto;
+  padding: 12px;
+  border-radius: 7px;
+  font-size: 13px;
+}
+
+.form-message.success {
+  display: block;
+  background: #dcfce7;
+  color: #166534;
+}
+
+.form-message.error {
+  display: block;
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+/* =================================
+   12. STUDENT SEARCH
+================================= */
+
+.student-tools {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.student-tools p {
+  font-size: 14px;
+}
+
+.student-tools input {
+  width: 100%;
+  max-width: 350px;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  font-family: inherit;
+}
+
+/* =================================
+   13. STUDENT TABLE
+================================= */
+
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+th,
+td {
+  padding: 14px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+}
+
+th {
+  background: var(--primary);
+  color: white;
+}
+
+tbody tr:nth-child(even) {
+  background: #f8faff;
+}
+
+tbody tr:hover {
+  background: #edf4ff;
+}
+
+.empty-row {
+  text-align: center;
+  color: var(--muted);
+  padding: 25px;
+}
+
+/* =================================
+   14. STATUS AND DELETE BUTTON
+================================= */
+
+.status {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+}
+
+.registered {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.delete-button {
+  background: var(--danger);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 7px 12px;
+  cursor: pointer;
+}
+
+.delete-button:hover {
+  background: #991b1b;
+}
+
+/* =================================
+   15. CONTACT
+================================= */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.contact-card {
+  background: #f8faff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.contact-card h3 {
+  color: var(--primary);
+  margin-bottom: 8px;
+}
+
+.contact-card p {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* =================================
+   16. FOOTER
+================================= */
+
+.site-footer {
+  background: var(--primary);
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.site-footer p {
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+/* =================================
+   17. RESPONSIVE DESIGN
+================================= */
+
+@media (max-width: 768px) {
+  .site-header h1 {
+    font-size: 29px;
+  }
+
+  .features-grid,
+  .contact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  section {
+    padding: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    padding: 0 12px;
+  }
+
+  .site-header h1 {
+    font-size: 23px;
+  }
+
+  .main-navigation {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .features-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .registration-form {
+    padding: 12px;
+  }
+
+  fieldset {
+    padding: 14px;
+  }
+
+  .form-buttons {
+    flex-direction: column;
+  }
+
+  .form-buttons button {
+    width: 100%;
+  }
+
+  .student-tools {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .student-tools input {
+    max-width: 100%;
+  }
+}
